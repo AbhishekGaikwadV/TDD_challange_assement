@@ -1,4 +1,4 @@
-// let input= '1,a,z#,4\n,-3';
+
 
 function add(inputNumbers){
 //Input Validation
@@ -10,22 +10,20 @@ if( typeof inputNumbers === 'string' ||  inputNumbers === ''){
     });
 
     // Remove special characters
-    let numbers = cleanedNumbers.replace(/[^0-9]/g, '' );
+    let numbers = cleanedNumbers.replace(/[^0-9,]/g, '' );
      
     //Parse the string to integers and filter array for non-numerics
     let finalNumbers = numbers.split(',')
      .map(num => parseInt(num, 10))
      .filter(num => !isNaN(num));
 
-    
-   return finalNumbers;           
+    // Sum all the values in the array and return the sum as an integer
+   return finalNumbers.reduce((num,sum) => num + sum, 0);           
    
-}
-
-// else return 0;
-
+ }
 
 }
-// console.log(add(input));
+
+
 
 module.exports = add;

@@ -23,8 +23,11 @@ describe('Initalizing addFunction', () =>{
 //  it('Reamove special characters', ()=> {
 //     expect(add('1,a,z#,4\n,')).toBe('14');
 //  });
-      it('Parse the string to integers and filter array for non-numerics', () => {
-        expect(add('14')).toEqual(expect.arrayContaining([14]));
-      })
-     
+    //   it('Parse the string to integers and filter array for non-numerics', () => {
+    //     expect(add('14')).toEqual(expect.arrayContaining([14]));
+    //   })
+    it('Sum all the values in the array and return the sum as an integer', () => {
+        expect(add(dbMock[5],dbMock)).toBe(5);
+        
+    }) 
 });
