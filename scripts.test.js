@@ -6,6 +6,7 @@ dbMock = [
 '1,2',
 '1,2,3,4,5',
 '1,a,z#,4\n',
+'1,a,z#,4\n,-3',
 ];
 
 describe('Initalizing addFunction', () =>{
@@ -13,10 +14,12 @@ describe('Initalizing addFunction', () =>{
 //      expect(add('',dbMock)).toBe('');
 //    });
 
-   it('Remove non-numeric characters from input parameter', () => {
-    expect(add(dbMock[4],dbMock)).toBe(14);
-   });
-    // expect(add('1',dbMock)).toBe();
+  
+    it('Remove negative numbers', () =>{
+      expect(add(dbMock[5],dbMock)).toBe('1,a,z#,4\n,');
+    
+   })
+    
     
    
 });
