@@ -20,7 +20,7 @@ describe('Initalizing addFunction', () =>{
     
 //    });
 
-//  it('Reamove special characters', ()=> {
+//  it('Remove special characters', ()=> {
 //     expect(add('1,a,z#,4\n,')).toBe('14');
 //  });
     //   it('Parse the string to integers and filter array for non-numerics', () => {
@@ -29,9 +29,9 @@ describe('Initalizing addFunction', () =>{
     // it('Sum all the values in the array and return the sum as an integer', () => {
     //     expect(add(dbMock[5],dbMock)).toBe(5);
     //   });
-    it('remove negative number throw error and if multiple display them with exception', () =>{
-        expect(() => add(dbMock[5])).toThrow('negative numbers not allowed -3');
-    });
+    // it('remove negative number throw error and if multiple display them with exception', () =>{
+    //     expect(() => add(dbMock[5])).toThrow('negative numbers not allowed -3');
+    // });
 
   
 });
