@@ -25,9 +25,13 @@ describe('Initalizing addFunction', () =>{
 //  });
     //   it('Parse the string to integers and filter array for non-numerics', () => {
     //     expect(add('14')).toEqual(expect.arrayContaining([14]));
-    //   })
-    it('Sum all the values in the array and return the sum as an integer', () => {
-        expect(add(dbMock[5],dbMock)).toBe(5);
-        
-    }) 
+    //   });
+    // it('Sum all the values in the array and return the sum as an integer', () => {
+    //     expect(add(dbMock[5],dbMock)).toBe(5);
+    //   });
+    it('remove negative number throw error and if multiple display them with exception', () =>{
+        expect(() => add(dbMock[5])).toThrow('negative numbers not allowed -3');
+    });
+
+  
 });
